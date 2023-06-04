@@ -22,8 +22,11 @@ function StartGameScreen() {
                 'Invalid number!', 
                 'Number has to be a number between 1 and 99',
                 [{ text: 'Okay', style: 'destructive', onPress: resetInputHandler}]
-            )
+            );
+            return;
          }
+
+         console.log('Valid number!');
     }
 
     return (
@@ -40,7 +43,7 @@ function StartGameScreen() {
 
             <View /* Note: The buttons are in two views so that they distribute the flex space evenly amongst each other and are same size. */ style={styles.buttonsContainer}> 
                 <View style={styles.buttonContainer}> 
-                <PrimaryButton>Reset</PrimaryButton>
+                <PrimaryButton onPress={resetInputHandler}>Reset</PrimaryButton>
                 </View>
                 <View style={styles.buttonContainer}>
                 <PrimaryButton onPress={confirmInputHandler} >Confirm</PrimaryButton>
