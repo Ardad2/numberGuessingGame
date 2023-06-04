@@ -1,8 +1,19 @@
+import { useState } from 'react';
 import { TextInput, StyleSheet, View} from 'react-native';
 
 import PrimaryButton from '../components/PrimaryButton'
 
 function StartGameScreen() {
+    const [enteredNumber, setEnteredNumber] = useState('');
+
+    function numberInputHandler(enteredText) {
+        setEnteredNumber(enteredText);
+    }
+
+    function confirmInputHandler() {
+
+    }
+
     return (
         <View style = {styles.inputContainer}>
             <TextInput 
@@ -11,6 +22,8 @@ function StartGameScreen() {
             keyboardType="number-pad"
             autoCapitalize="none"
             autoCorrect={false}
+            onChangeText={numberInputHandler}
+            value={enteredNumber}
             ></TextInput>
 
             <View /* Note: The buttons are in two views so that they distribute the flex space evenly amongst each other and are same size. */ style={styles.buttonsContainer}> 
