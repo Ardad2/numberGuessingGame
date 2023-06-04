@@ -31,7 +31,7 @@ function StartGameScreen() {
                 <PrimaryButton>Reset</PrimaryButton>
                 </View>
                 <View style={styles.buttonContainer}>
-                <PrimaryButton>Confirm</PrimaryButton>
+                <PrimaryButton onPress={confirmInputHandler} >Confirm</PrimaryButton>
                 </View>
             </View>
         </View>
