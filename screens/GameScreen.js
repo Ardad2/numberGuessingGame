@@ -24,6 +24,8 @@ function GameScreen({userNumber, onGameOver}) {
     const initialGuess = generateRandomBetween(1, 100, userNumber);
     const [currentGuess, setCurrentGuess] = useState(initialGuess);
 
+    //useEffect() runs after the component function has been executed.
+
     useEffect(() => {
         if (currentGuess === userNumber) {
             onGameOver();
