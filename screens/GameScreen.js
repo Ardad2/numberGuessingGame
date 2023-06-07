@@ -59,7 +59,6 @@ function GameScreen({userNumber, onGameOver}) {
             //Greater
             minBoundary = currentGuess + 1;
         }
-        console.log(minBoundary, maxBoundary);
         const newRndNumber = generateRandomBetween(minBoundary, maxBoundary, currentGuess);
         
         setCurrentGuess(newRndNumber);
